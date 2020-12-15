@@ -24,7 +24,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Detalle de pago</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -39,5 +39,20 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script src="/assets/js/script.js"></script>
+    <script>
+      var frmVisa = document.getElementById('frmVisaNet');
+
+      if (document.body.contains(frmVisa)) {
+          document.getElementById('frmVisaNet').setAttribute("style", "display:none");
+      }
+      function visaNetEc3() {
+          if (document.getElementById('ckbTerms').checked) {
+              document.getElementById('frmVisaNet').setAttribute("style", "display:auto");
+          } else {
+              document.getElementById('frmVisaNet').setAttribute("style", "display:none");
+          }
+      }
+    </script>
   </body>
 </html>
